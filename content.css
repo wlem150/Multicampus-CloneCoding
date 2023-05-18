@@ -1,0 +1,369 @@
+@import "utf-8";
+@import "reset.css";
+
+.main_section_head {
+    width: 1352px;
+    padding: 0 200px;
+    margin: 0 auto;
+}
+
+.main_section_head>h2 {
+    padding-top: 120px;
+    font-size: 18px;
+    color: #fe6B00;
+    width: 1270px;
+    line-height: 1.5em;
+}
+
+.main_section_head>p {
+    width: 1270px;
+    height: 114px;
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+
+/* section 1  슬라이드 컨텐츠 */
+
+.main_content_wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main_section_contents {
+    padding-bottom: 100px;
+}
+
+/* ul 에 nowrap 을 주어서 block 속성의 값들의 특징인 범위를 초과하면 밑으로 자동적으로 줄봐꿈 하는 것을 없앤다. */
+.main_content_wrap .main_section_contents {
+    position: relative;
+    white-space: nowrap;
+}
+
+/* ul 에 있는 block 속성이 nowrap 이기에 밑에 있는 li 의 display를 inline-block 으로 교체하면 li의 값들이 옆으로 줄을 지어지게 된다. */
+.main_content_wrap .main_section_contents li {
+    position: relative;
+    display: inline-block;
+    transition: all 1s;
+}
+
+/* 밖에서 li에 nowrap 으로 주어서 생긴 모든 값들의 범위 초과를 안쪽의 블럭을 감싸주고 있는 a 태그에 pre-wrap 을 주면서 nowrap 속성을 li에 한정시킨다. */
+.main_content_wrap .main_section_contents li>a {
+    position: relative;
+    display: block;
+    width: 440px;
+    height: 367px;
+    margin-left: 20px;
+    white-space: pre-wrap;
+    cursor: pointer;
+    color: #8D8D8D;
+}
+
+.main_content_wrap .main_section_contents li>a:hover>p:nth-child(2) {
+    color: #fe6B00;
+    transition: 0.5s;
+}
+
+.main_content_wrap .main_section_contents li p:nth-child(2) {
+    font-size: 20px;
+}
+
+/* 클래스에 control이 들어있는 모든 라벨을 지정 */
+.main_content_wrap .slide_control [class*="control"] label {
+    position: absolute;
+    z-index: 10;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main_content_wrap .slide_control [class*="control"] label.prev {
+    top: -20px;
+    right: 60px;
+
+    background: #fff url('./../image/main_section_arrow_left.png')center center / 50% no-repeat;
+
+}
+
+.main_content_wrap .slide_control [class*="control"] label.next {
+    background: #fff url('./../image/main_section_arrow_right.png')center center / 50% no-repeat;
+    right: 0px;
+    top: 0px;
+}
+
+[name="slide"] {
+    display: none;
+}
+
+/* id 값이 slide01 이 체크가 될 시에 이 값 li의 왼쪽에 있는 left을 변환을 주어서 li의 위치를 마시 넘기는 듯한 모션으로 만듬 */
+#slide01:checked~.main_section_contents li {
+    left: 0;
+}
+
+#slide02:checked~.main_section_contents li {
+    left: -33%;
+}
+
+#slide03:checked~.main_section_contents li {
+    left: -66%;
+}
+
+#slide04:checked~.main_section_contents li {
+    left: -99%;
+}
+
+#slide05:checked~.main_section_contents li {
+    left: -132%;
+}
+
+#slide06:checked~.main_section_contents li {
+    left: -165%;
+}
+
+/* 기본 상태는 슬라이드 컨트롤러의 버튼이 보이지 안된 상태로 유지함. */
+
+.slide_control [class*="control"] {
+    display: none;
+}
+
+/*여기서 radio 값이 체크가 되면 display의 값을 block 으로 변환을 주어서 넘어갈 때 중복되는 값을 사라지게 만듬 */
+#slide01:checked~.slide_control .control01 {
+    display: block;
+}
+
+#slide02:checked~.slide_control .control02 {
+    display: block;
+}
+
+#slide03:checked~.slide_control .control03 {
+    display: block;
+}
+
+#slide04:checked~.slide_control .control04 {
+    display: block;
+}
+
+#slide05:checked~.slide_control .control05 {
+    display: block;
+}
+
+#slide06:checked~.slide_control .control06 {
+    display: block;
+}
+
+
+/* section 2  클릭시 화면 변경 */
+.main_section_second_wrap {
+    margin: auto;
+}
+
+.main_section_second {
+    background: url("./../image/main_banner.jpg");
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    max-width: 100%;
+    text-align: center;
+    height: 560px;
+
+    max-height: 560px;
+}
+
+.section_second_layout {
+    width: 1170px;
+    height: 161px;
+    padding: 80px 114px 0;
+    margin: -160px 0 0 auto;
+    background-color: #fff;
+
+}
+
+.section_second_layout>h2 {
+    font-size: 18px;
+    color: #fe6B00;
+    line-height: 1.5em;
+}
+
+.section_second_layout>p {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5em;
+
+}
+
+
+.section_second_contents {
+    width: 1352px;
+    height: 708px;
+    position: relative;
+    margin: auto;
+}
+
+
+.section_second_lists {
+    text-align: left;
+    padding-top: 80px;
+
+}
+
+.section_second_lists li {
+    width: 302px;
+    height: 29px;
+    padding: 16px;
+
+}
+
+.section_second_lists li a {
+    font-size: 20px;
+    padding: 0.8em;
+    line-height: 1.45em;
+    color: #ccc;
+    display: block;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.section_second_lists li a:hover,
+.section_second_lists li a:focus {
+    color: #222;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.section_second_lists>li:first-child>a {
+    border-top: 2.5px solid black;
+}
+
+.section_second_items {
+    position: absolute;
+    top: 100px;
+    left: 342px;
+    display: none;
+    color: #8D8D8D;
+}
+
+.section_second_items p {
+    margin-top: 2.5em;
+    line-height: 1.75em;
+    white-space: pre-line;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+.section_second_items a {
+    margin-top: 18px;
+    display: block;
+    color: #222;
+    font-weight: bold;
+}
+
+.section_second_items a>img {
+
+    width: 25px;
+    height: 15px;
+    filter: invert(1);
+    vertical-align: top;
+    padding-right: 5px;
+}
+
+
+
+#target1 {
+    display: block;
+}
+
+
+
+/* section 3 마우스 오버시 사진 변경 */
+
+.main_section_thrid_wrap {
+    background-color: #f1f1f1;
+    margin-top: 200px;
+    height: 900px;
+}
+
+.main_section_third {
+    width: 1352px;
+
+    margin: auto;
+    background-color: #f1f1f1
+}
+
+.section_third_layout {
+    padding-top: 120px;
+    width: 1170px;
+    height: 161px;
+    background-color: #f1f1f1;
+
+}
+
+.section_third_layout>h2 {
+    font-size: 18px;
+    color: #fe6B00;
+    line-height: 1.5em;
+}
+
+.section_third_layout>p {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5em;
+
+}
+
+.third_img_box {
+    width: 1365px;
+    height: 753px;
+    margin-top: 80px;
+
+}
+
+.third_img_box>li {
+    font-size: 0;
+    position: relative;
+}
+
+.third_img_box>li>div {
+    position: absolute;
+    display: block;
+
+}
+
+.third_img_box>li>div img {
+    position: absolute;
+
+}
+
+.third_img_box>li>div>img:last-child {
+    opacity: 0;
+
+}
+
+.third_img_box>li>div>:last-child:hover {
+    opacity: 1;
+    transition: 0.5s;
+    transform: scale(0.99, 0.99);
+    filter: invert(0.2);
+
+}
+
+.third_img_box>li:nth-child(2)>div>img:first-child {
+    left: 450px;
+}
+
+.third_img_box>li:nth-child(3)>div>img:first-child {
+    left: 900px;
+}
+
+.third_img_box>li:nth-child(2)>div>img:last-child {
+    left: 450px;
+}
+
+.third_img_box>li:nth-child(3)>div>img:last-child {
+    left: 900px;
+}

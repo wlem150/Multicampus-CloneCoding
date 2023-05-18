@@ -1,0 +1,263 @@
+@import "utf-8";
+@import "reset.css";
+
+.footer_layout {
+    background: url("./../image/footer_01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    text-align: center;
+    height: 490px;
+    max-height: 490px;
+}
+
+.footer_content {
+    width: 1352px;
+    padding: 150px 300px 50px;
+    margin: auto;
+}
+
+.footer_content>p:first-child {
+    font-size: 36px;
+    line-height: 1.6em;
+    font-weight: bold;
+    text-align: left;
+    color: #dedede;
+}
+
+.footer_content>p:nth-child(2) {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.6em;
+    text-align-last: left;
+    color: #dedede;
+}
+
+.apply_tap {
+    width: 1352px;
+    text-align: left;
+    margin: auto;
+}
+
+.apply_tap>a {
+    width: 230px;
+    height: 64px;
+
+    display: inline-block;
+    line-height: 64px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.apply_tap>a:first-child {
+    background-color: #fe6B00;
+    color: #dedede;
+    font-weight: bold;
+    border: 1px solid #fe6B00;
+}
+
+.apply_tap>a:first-child:hover {
+    background-color: #fe5B00;
+    border: 1px solid #fe5B00;
+    transition: 1s;
+}
+
+.apply_tap>a:last-child {
+    background-color: #dedede;
+    color: #fe6B00;
+    font-weight: bold;
+    border: 1px solid #dedede;
+    margin-left: 20px;
+}
+
+.apply_tap>a:last-child:hover {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    transition: 1s;
+}
+
+
+.footer_bg {
+
+    background-color: #222;
+    height: 284px;
+    position: relative;
+}
+
+.footer_certi_logo {
+    padding: 20px 0;
+    margin: auto;
+    width: 1352px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #e5e5e5 1px solid;
+}
+
+.footer_certi_logo>img {
+    height: 40px;
+}
+
+.footer_list {
+    width: 1352px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.footer_list img {
+    vertical-align: middle;
+}
+
+.footer_list li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.footer_list a {
+    color: #9c9c9c;
+    font-size: 14px;
+}
+
+.footer_list a:hover {
+    text-decoration: underline;
+}
+
+.footer_list li:nth-child(4) a {
+    font-weight: bold;
+}
+
+.footer_address {
+    width: 1352px;
+    margin: auto;
+    margin-top: 40px;
+    line-height: 1.5em;
+    font-size: 14px;
+    color: #9c9c9c;
+}
+
+.footer_link_logo_wrap {
+    text-align: right;
+    width: 1352px;
+    margin: auto;
+    margin-top: 40px;
+    line-height: 1.5em;
+    position: relative;
+
+}
+
+.footer_link_logo {
+    position: absolute;
+    bottom: 50px;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.footer_link_logo img {
+    width: 24px;
+    height: 24px;
+    margin-left: 28px;
+    align-items: center;
+    padding-top: 5px;
+}
+
+
+.footer_link_logo>div {
+    display: inline-block;
+    margin-left: 28px;
+
+}
+
+.footer_link_logo>div>a {
+    border: 1px solid #9c9c9c;
+    color: #9c9c9c;
+    font-size: 15px;
+    width: 160px;
+    height: 40px;
+    display: block;
+    text-align: left;
+    line-height: 40px;
+    padding-left: 20px;
+
+}
+
+.footer_link_logo>button {
+    padding: 11px 18px;
+    border: 1px solid #707070;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.bottom_bg {
+    background-color: black;
+    height: 50px;
+    margin: auto;
+}
+
+.bottom_list {
+    width: 1352px;
+    margin: auto;
+    text-align: left;
+    color: #999;
+    padding: 20px 16px;
+    height: 20px;
+    font-size: 14px;
+}
+
+.bottom_list li {
+    float: left;
+    padding-right: 20px;
+}
+
+/* 퀵바 */
+
+.quick {
+    position: fixed;
+    z-index: 15;
+    right: 0;
+    bottom: 50px;
+}
+
+.quick .quick-in {
+    overflow: hidden;
+    width: 100px;
+    border: 1px solid #EAEAEA;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px 0 0 5px;
+
+}
+
+.quick .quick-in p {
+    font-size: 14px;
+    line-height: 1.3em;
+}
+
+
+.quick .quick-in>a {
+    padding: 20px 0 20px;
+    font-size: 14px;
+    color: #000;
+    opacity: 0.8;
+    line-height: 20px;
+    display: block;
+    font-size: 9px;
+}
+
+.quick .quick-in>a.gotop {
+    padding: 15px 0;
+    height: 40px;
+}
+
+.quick .quick-in>a:hover {
+    background-color: #999;
+    border: #999;
+    transition: 0.4s;
+}
